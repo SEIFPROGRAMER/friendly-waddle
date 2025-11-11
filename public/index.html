@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplayer Game & Announcements</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="auth">
+<h2>Login</h2>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<hr>
+<h2>Register</h2>
+<input type="text" id="rusername" placeholder="Username">
+<input type="email" id="remail" placeholder="Email">
+<input type="password" id="rpassword" placeholder="Password">
+<button onclick="register()">Register</button>
+</div>
+
+<div id="game" style="display:none;">
+<h2>Welcome <span id="userDisplay"></span></h2>
+<input type="text" id="announcement" placeholder="Write announcement">
+<button onclick="sendAnnouncement()">Send Announcement</button>
+<div id="announcements"></div>
+<canvas id="gameCanvas" width="500" height="500" style="border:1px solid black;"></canvas>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
